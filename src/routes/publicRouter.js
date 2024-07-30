@@ -1,10 +1,10 @@
 var express = require("express");
-const ProductController = require("../controllers/ProductController");
-
 var router = express.Router();
+const BanquetController = require("../controllers/BanquetController");
 
-// these all routers are access to every once
-
-router.get("/get_all_product", ProductController.getAllProducts);
+// requests Routes
+router.post("/requests", BanquetController.addRequest);
+router.get("/requests/:id", BanquetController.getSingleRequest);
+router.put("/requests/:id", BanquetController.updateRequest);
 
 module.exports = router;
