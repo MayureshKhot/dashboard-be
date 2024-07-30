@@ -1,10 +1,11 @@
 var express = require("express");
-const ProductController = require("../controllers/ProductController");
 var router = express.Router();
+const BanquetController = require("../controllers/BanquetController");
 
-router.get("/get_user_product_list", ProductController.productList);
-router.get("/get_product_details/:id", ProductController.productDetail);
-router.post("/add_new_product", ProductController.productAdd);
-router.put("/update_product_details/:id", ProductController.productUpdate);
-router.delete("/delete_product/:id", ProductController.productDelete);
+router.post("/requests", BanquetController.addRequest);
+router.get("/requests", BanquetController.getRequest);
+router.get("/requests/:id", BanquetController.getSingleRequest);
+router.put("/requests/:id", BanquetController.updateRequest);
+router.delete("/requests/:id", BanquetController.deleteRequest);
+
 module.exports = router;
