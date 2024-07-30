@@ -24,6 +24,15 @@ const banquetRequestSchema = new mongoose.Schema({
     type:Boolean,
     default:false
   },
+  paymentId:{
+    type:String,
+    default:null
+  },
+  price:{
+    type:Number,
+    default:0
+
+  },
   requestDate: { 
     type: Date, 
     default: Date.now 
