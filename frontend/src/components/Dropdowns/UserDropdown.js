@@ -1,6 +1,7 @@
 import React from "react";
 import { createPopper } from "@popperjs/core";
 import profileImage from 'assets/img/team-1-800x800.jpg';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const UserDropdown = () => {
   // dropdown props
   const [dropdownPopoverShow, setDropdownPopoverShow] = React.useState(false);
@@ -15,6 +16,10 @@ const UserDropdown = () => {
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
+  const Logout = () => {
+    localStorage.removeItem('token');
+    window.location.reload();
+  }
   return (
     <>
       <a
@@ -43,42 +48,32 @@ const UserDropdown = () => {
           "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
         }
       >
-        <a
-          href="#pablo"
+        <Link
+          to="/admin/settings"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
           onClick={(e) => e.preventDefault()}
         >
-          Action
-        </a>
-        <a
-          href="#pablo"
+          Create Request
+        </Link>
+        <Link
+          to="/admin/tables"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
-          onClick={(e) => e.preventDefault()}
         >
-          Another action
-        </a>
-        <a
-          href="#pablo"
-          className={
-            "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-          }
-          onClick={(e) => e.preventDefault()}
-        >
-          Something else here
-        </a>
+          List of Request
+        </Link>
         <div className="h-0 my-2 border border-solid border-blueGray-100" />
         <a
           href="#pablo"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
-          onClick={(e) => e.preventDefault()}
+          onClick={(e) => Logout()}
         >
-          Seprated link
+          Logout
         </a>
       </div>
     </>
