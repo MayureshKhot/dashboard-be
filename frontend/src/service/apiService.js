@@ -6,7 +6,8 @@ const API_URL = 'http://localhost:8000/api';
  * @param {String} token Bearer Token
  * @returns {Object}
  */
-export const makeGetRequest = (url, token) => {
+export const makeGetRequest = (url) => {
+    const token = localStorage.getItem('token');
     return fetch(API_URL+url, {
         method: 'GET',
         headers: {
@@ -35,7 +36,8 @@ export const makeGetRequest = (url, token) => {
  * @param {*} token 
  * @returns 
  */
-export const makePostRequest = (url, data, token) => {
+export const makePostRequest = (url, data) => {
+    const token = localStorage.getItem('token');
     return fetch(API_URL+url, {
         method: 'POST',
         headers: {
@@ -59,7 +61,9 @@ export const makePostRequest = (url, data, token) => {
  * @param {*} token 
  * @returns 
  */
-export const makePutRequest = (url, data, token) => {
+export const makePutRequest = (url, data) => {
+    const token = localStorage.getItem('token');
+
     return fetch(API_URL+url, {
         method: 'PUT',
         headers: {
@@ -82,7 +86,8 @@ export const makePutRequest = (url, data, token) => {
         });
 }
 
-export const makeDeleteRequest = (url, token) => {
+export const makeDeleteRequest = (url) => {
+    const token = localStorage.getItem('token');
     return fetch(API_URL+url, {
         method: 'DELETE',
         headers: {

@@ -2,17 +2,14 @@ const mongoose = require('mongoose');
 
 const banquetRequestSchema = new mongoose.Schema({
   requesterEmail:{
-
+    type:String,
+    required:true
   },
   requesterPhone:{
     type:String,
     required:true
   },
   requesterFullName:{
-    type:String,
-    required:true
-  },
-  requesterName:{
     type:String,
     required:true
   },

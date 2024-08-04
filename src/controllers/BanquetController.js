@@ -10,8 +10,6 @@ exports.addRequest = [
   body('requesterFullName').notEmpty().withMessage('Requester full name is required'),
   body('eventDate').isDate().withMessage('Invalid event date'),
   body('numberOfGuests').isInt({ min: 1 }).withMessage('Number of guests must be a positive integer'),
-  body('paymentId').optional().isString().withMessage('Payment ID must be a string'),
-  body('price').optional().isFloat({ min: 0 }).withMessage('Price must be a non-negative number'),
 
   async (req, res) => {
     const errors = validationResult(req);
