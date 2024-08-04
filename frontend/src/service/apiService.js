@@ -1,5 +1,6 @@
 // get URL variable from env file
-const API_URL = 'http://localhost:8000/api';
+// const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://event-manager-2tu6.onrender.com/api';
 /**
  * 
  * @param {String} url End Point of the API
