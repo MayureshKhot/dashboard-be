@@ -57,24 +57,15 @@ exports.register = [
 				const { firstName, lastName, email, password } = req.body;
 				//hash input password
 				const hashPassword = await bcrypt.hash(password,10);
-				// generate OTP for confirmation
-				let otp = utility.randomNumber(4);
 				// Create User object with escaped and trimmed data
 				var user = new UserModel({
 					firstName: firstName,
 					lastName: lastName,
 					email: email,
 					password: hashPassword,
-					confirmOTP: otp,
+					role: "admin",
+					isConfirmed: 1
 				});
-				// Html email body
-				let html = constant.otpMailTemplate(otp);
-				// Send confirmation email
-				mailer.send(
-					email,
-					"Confirm Account",
-					html
-				);
 				// Save user.
 				await user.save();
 				let userData = {

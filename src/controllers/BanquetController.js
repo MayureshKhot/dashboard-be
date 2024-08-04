@@ -5,7 +5,6 @@ const { body, validationResult } = require('express-validator');
 // Function to create a new banquet request with validation
 exports.addRequest = [
   // Validation middleware
-  body('requesterName').notEmpty().withMessage('Requester name is required'),
   body('requesterEmail').isEmail().withMessage('Invalid email address'),
   body('requesterPhone').notEmpty().withMessage('Requester phone is required'),
   body('requesterFullName').notEmpty().withMessage('Requester full name is required'),
@@ -87,7 +86,6 @@ exports.getSingleRequest = async (req, res) => {
 // Function to update a banquet request by ID with validation
 exports.updateRequest = [
   // Validation middleware
-  body('requesterName').optional().notEmpty().withMessage('Requester name is required'),
   body('requesterEmail').optional().isEmail().withMessage('Invalid email address'),
   body('requesterPhone').optional().notEmpty().withMessage('Requester phone is required'),
   body('requesterFullName').optional().notEmpty().withMessage('Requester full name is required'),

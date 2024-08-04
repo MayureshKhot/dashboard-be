@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const banquetRequestSchema = new mongoose.Schema({
-  requesterName: { 
-    type: String, 
-    required: true 
-  },
   requesterEmail:{
 
   },
