@@ -41,7 +41,7 @@ if(process.env.NODE_ENV !== "test") {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "../", "public"))); // Why this ../ because we are in src folder
+app.use(express.static(path.join(__dirname, "../", "frontend", "build"))); // Why this ../ because we are in src folder
 app.use(cors());
 
 // Route Prefixes
@@ -50,10 +50,12 @@ app.use("/api", apiRouter);
 app.use("/auth", authRouter);
 app.use("/banquet-request", banquetRequestRouter); // Add this line
 
-// throw 404 if URL not found
-app.all("*", function (req, res) {
-  return apiResponse.notFoundResponse(res, "API not found");
+app.use(express.static(path.join(__dirname, "../", "frontend","build"))); // Why this ../ because we are in src folder
+
+app.all("*", function (req, res) { // Deploy site 
+	res.status(200).sendFile(path.join('frontend','build','index.html'), { root: './' });
 });
+
 
 app.use((err, req, res, next) => {
   if (err.name === "UnauthorizedError") {

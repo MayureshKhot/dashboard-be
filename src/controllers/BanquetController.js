@@ -5,14 +5,11 @@ const { body, validationResult } = require('express-validator');
 // Function to create a new banquet request with validation
 exports.addRequest = [
   // Validation middleware
-  body('requesterName').notEmpty().withMessage('Requester name is required'),
   body('requesterEmail').isEmail().withMessage('Invalid email address'),
   body('requesterPhone').notEmpty().withMessage('Requester phone is required'),
   body('requesterFullName').notEmpty().withMessage('Requester full name is required'),
   body('eventDate').isDate().withMessage('Invalid event date'),
   body('numberOfGuests').isInt({ min: 1 }).withMessage('Number of guests must be a positive integer'),
-  body('paymentId').optional().isString().withMessage('Payment ID must be a string'),
-  body('price').optional().isFloat({ min: 0 }).withMessage('Price must be a non-negative number'),
 
   async (req, res) => {
     const errors = validationResult(req);
@@ -87,7 +84,6 @@ exports.getSingleRequest = async (req, res) => {
 // Function to update a banquet request by ID with validation
 exports.updateRequest = [
   // Validation middleware
-  body('requesterName').optional().notEmpty().withMessage('Requester name is required'),
   body('requesterEmail').optional().isEmail().withMessage('Invalid email address'),
   body('requesterPhone').optional().notEmpty().withMessage('Requester phone is required'),
   body('requesterFullName').optional().notEmpty().withMessage('Requester full name is required'),
