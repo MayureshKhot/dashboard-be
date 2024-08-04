@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import  headerImage from "assets/img/pattern_react.png";
 
 export default function Index() {
   return (
@@ -30,20 +31,12 @@ export default function Index() {
                 components for ReactJS, Vue and Angular.
               </p>
               <div className="mt-12">
-                <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus?ref=nr-index"
-                  target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                >
-                  Get started
-                </a>
-                <a
-                  href="https://github.com/creativetimofficial/notus-react?ref=nr-index"
+                <Link
+                  to="/auth/login"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                  target="_blank"
                 >
-                  Github Star
-                </a>
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>
@@ -51,7 +44,7 @@ export default function Index() {
 
         <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-          src={require("assets/img/pattern_react.png").default}
+          src={headerImage}
           alt="..."
         />
       </section>
@@ -76,7 +69,7 @@ export default function Index() {
             ></polygon>
           </svg>
         </div>
-        <div className="container mx-auto">
+        {/* <div className="container mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-lightBlue-500">
@@ -173,9 +166,9 @@ export default function Index() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="container mx-auto overflow-hidden pb-20">
+        {/* <div className="container mx-auto overflow-hidden pb-20">
           <div className="flex flex-wrap items-center">
             <div className="w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48">
               <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
@@ -413,9 +406,9 @@ export default function Index() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="container mx-auto px-4 pb-32 pt-48">
+        {/* <div className="container mx-auto px-4 pb-32 pt-48">
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
               <div className="md:pr-12">
@@ -501,10 +494,10 @@ export default function Index() {
               start playing with them.
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
 
-      <section className="block relative z-1 bg-blueGray-600">
+      {/* <section className="block relative z-1 bg-blueGray-600">
         <div className="container mx-auto">
           <div className="justify-center flex flex-wrap">
             <div className="w-full lg:w-12/12 px-4  -mt-24">
@@ -557,9 +550,9 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-20 bg-blueGray-600 overflow-hidden">
+      {/* <section className="py-20 bg-blueGray-600 overflow-hidden">
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
@@ -600,9 +593,9 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="pb-16 bg-blueGray-200 relative pt-32">
+      {/* <section className="pb-16 bg-blueGray-200 relative pt-32">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
@@ -660,7 +653,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <Footer />
     </>
   );
