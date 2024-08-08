@@ -186,7 +186,7 @@ export default function CardTable() {
     // Fetch the list of requests
     makeGetRequest('/pri/requests')
       .then(response => {
-        setRequests(response.data);
+        setRequests(response.data.reverse());
       })
       .catch(error => {
         console.error("There was an error fetching the requests!", error);
