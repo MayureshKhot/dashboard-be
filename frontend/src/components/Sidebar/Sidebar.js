@@ -190,8 +190,8 @@ export default function Sidebar() {
             //       <i className="fas fa-newspaper text-blueGray-400 mr-2 text-sm"></i>{" "}
             //       Logout
             //     </Link>
-              </li>
-            </ul>
+              // </li>
+            // </ul>
           </div>
         </div>
       </nav>
