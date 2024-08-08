@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d9e52e54.css",
-    "main.js": "/static/js/main.9c8c16d6.js",
+    "main.js": "/static/js/main.72709573.js",
     "static/media/fa-solid-900.svg": "/static/media/fa-solid-900.13de59f1a36b6cb4bca0.svg",
     "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.216edb96b562c79adc09.svg",
     "static/media/fa-solid-900.eot": "/static/media/fa-solid-900.efbd5d20e407bbf85f2b.eot",
@@ -20,14 +20,14 @@
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.1017bce89c72f95bcf8e.ttf",
     "static/media/fa-regular-400.woff": "/static/media/fa-regular-400.3672264812746c3c7225.woff",
     "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.68c5af1f48e2bfca1e57.woff2",
-    "static/media/google.svg": "/static/media/google.eae9aa9354350126d1b032847835a051.svg",
-    "static/media/github.svg": "/static/media/github.6c95555646a0ecabf549179c97bf0e7d.svg",
+    "static/media/google.svg": "/static/media/google.952443d790ba00a03a5e2b10397d3acd.svg",
+    "static/media/github.svg": "/static/media/github.f7165d3e2844ef758a22c6829f494e71.svg",
     "index.html": "/index.html",
     "main.d9e52e54.css.map": "/static/css/main.d9e52e54.css.map",
-    "main.9c8c16d6.js.map": "/static/js/main.9c8c16d6.js.map"
+    "main.72709573.js.map": "/static/js/main.72709573.js.map"
   },
   "entrypoints": [
     "static/css/main.d9e52e54.css",
-    "static/js/main.9c8c16d6.js"
+    "static/js/main.72709573.js"
   ]
 }
