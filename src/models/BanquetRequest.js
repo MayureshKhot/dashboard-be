@@ -31,7 +31,7 @@ const banquetRequestSchema = new mongoose.Schema({
     default: Date.now 
   },
   eventDate: { 
-    type: Date, 
+    type: String, 
     required: true 
   },
   numberOfGuests: { 
