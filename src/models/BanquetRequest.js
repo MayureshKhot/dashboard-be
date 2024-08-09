@@ -9,7 +9,11 @@ const banquetRequestSchema = new mongoose.Schema({
     type:String,
     required:true
   },
-  requesterFullName:{
+  requesterFirstName:{
+    type:String,
+    required:true
+  },
+  requesterLastName:{
     type:String,
     required:true
   },
@@ -36,7 +40,8 @@ const banquetRequestSchema = new mongoose.Schema({
   },
   numberOfGuests: { 
     type: Number, 
-    required: true 
+    required: true,
+    default: 1
   },
   details: { 
     type: String 
