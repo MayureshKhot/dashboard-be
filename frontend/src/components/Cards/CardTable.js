@@ -256,7 +256,7 @@ export default function CardTable() {
               {requests.map((request) => (
                 <tr key={request._id}>
                   <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                    {request.requesterFirstName}
+                    {request.requesterFullName}
                   </td>
                   <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                     {request.eventDate}

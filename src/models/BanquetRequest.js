@@ -13,6 +13,10 @@ const banquetRequestSchema = new mongoose.Schema({
     type:String,
     required:true
   },
+  requesterFullName:{
+    type:String,
+    required:true
+  },
   requesterLastName:{
     type:String,
     required:true
