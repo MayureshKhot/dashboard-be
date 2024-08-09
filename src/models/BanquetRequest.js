@@ -27,7 +27,7 @@ const banquetRequestSchema = new mongoose.Schema({
 
   },
   requestDate: { 
-    type: Date, 
+    type: String, 
     default: Date.now 
   },
   eventDate: { 
