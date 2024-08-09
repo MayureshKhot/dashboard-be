@@ -8,7 +8,7 @@ exports.addRequest = [
   body('requesterEmail').isEmail().withMessage('Invalid email address'),
   body('requesterPhone').notEmpty().withMessage('Requester phone is required'),
   body('requesterFullName').notEmpty().withMessage('Requester full name is required'),
-  body('eventDate').isDate().withMessage('Invalid event date'),
+  // body('eventDate').isDate().withMessage('Invalid event date'),
   body('numberOfGuests').isInt({ min: 1 }).withMessage('Number of guests must be a positive integer'),
 
   async (req, res) => {
